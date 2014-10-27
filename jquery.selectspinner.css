@@ -26,7 +26,7 @@
 	display:inline-block;
 	border:1px solid #ccc;
 	position:relative;
-	min-width:50px;
+	min-width:20px;
 }
 .xdsoft_selectspinner.active{
 outline:1px solid rgba(0,0,127,0.5);
@@ -66,6 +66,7 @@ outline:1px solid rgba(0,0,127,0.5);
 	cursor:default;
 	background-color:transparent;
 	outline:0px !important;
+	width:10px;
 }
 .xdsoft_selectspinner .xdsoft_spinner button:hover{
 	opacity:1.0;
