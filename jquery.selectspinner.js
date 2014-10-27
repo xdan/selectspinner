@@ -6,15 +6,15 @@
 /*global document,window,jQuery,setTimeout,clearTimeout,console*/
 (function ($) {
 	'use strict';
-	var ARROWLEFT = 37,
-		ARROWRIGHT = 39,
-		ARROWUP = 38,
+	var	ARROWUP = 38,
 		ARROWDOWN = 40,
 		ENTER = 13,
 		TAB = 9,
+		ESC = 27,
 		default_options  = {
 			classes: ['xdsoft_pretty'],
 			dropDownMaxHeight: 200,
+			autoopen: false,
 			dropdown: true,
 			wheel: true,
 			dragAndDropSpin: true,
@@ -32,14 +32,14 @@
 			me = {
 				input: null,
 				list: [],
-				options: {},
+				options: false,
 				find: function (str) {
 					if (str) {
 						str = str.toLowerCase();
 						var i, value, title;
 						for (i = 0; i < me.list.length; i += 1) {
-							value = (isScalar(me.list[i]) || !me.list[i].value) ? me.list[i] : me.list[i].value;
-							title = (isScalar(me.list[i]) || !me.list[i].title) ? value : me.list[i].title;
+							value = (isScalar(me.list[i]) || !me.list[i].value) ? me.list[i]+'' : me.list[i].value+'';
+							title = (isScalar(me.list[i]) || !me.list[i].title) ? value : me.list[i].title+'';
 							if (title.toLowerCase().substr(0, str.length) === str) {
 								me.dropdown.find('div.xdsoft_item').removeClass('active');
 								$(this).addClass('active');
@@ -168,11 +168,14 @@
 								.remove();
 					}
 				},
+				setOptions: function (options) {
+					me.options = $.extend(true, {}, me.options || default_options, options);
+				},
 				init:  function (options) {
 					if (inited || !me.input) {
 						return;
 					}
-					me.options = $.extend(true, {}, default_options, options);
+					me.setOptions(options);
 					inited = true;
 
 					me.selectspinner = $('<div class="xdsoft_selectspinner"></div>');
@@ -264,6 +267,9 @@
 						})
 						.on('focus', function (event) {
 							me.selectspinner.addClass('active');
+							if (me.options.autoopen) {
+								me.open();
+							}
 						})
 						.on('blur', function (event) {
 							me.selectspinner.removeClass('active');
@@ -278,10 +284,9 @@
 							case ENTER:
 								me.toggle();
 								break;
+							case ESC:
 							case TAB:
-								if ($(this).index()) {
-									me.close();
-								}
+								me.close();
 								break;
 							default:
 								c = String.fromCharCode(key);

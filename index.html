@@ -30,8 +30,8 @@
 <select id="day"></select>	
 <select id="hours"></select>	
 <select id="am">
-	<option>am</option>
-	<option>pm</option>
+	<option>AM</option>
+	<option>PM</option>
 </select>	
 <select id="minutes"></select>	
 <p>
@@ -46,13 +46,13 @@
 </p>
 </body>
 <script src="./jquery.js"></script>
-<script src="./jquery.selectspinner.js"></script>
+<script src="./jquery.selectspinner.min.js"></script>
 <script>
 $('select').selectspinner();
 var year, years = [], i, hours = [], minutes = [];
-for (year = 1986;year<2020; year++) {
-	years.push(year);
-}
+
+
+
 $('#month').on('change', function () {
 	var i, list = [],
 		count = new Date($('#year').val(), $(this).val(), 0).getDate();
@@ -61,12 +61,19 @@ $('#month').on('change', function () {
 	}
 	$('#day').selectspinner('update', list);
 })
+
+
+for (year = 1986;year<2020; year++) {
+	years.push(year);
+}
 $('#year')
 	.selectspinner('update', years)
 	.on('change', function () {
 		$('#month').trigger('change');
 	})
 	.selectspinner('val', 1986);
+	
+	
 for (i = 1;i <= 12;i += 1) {
 	hours.push({
 		value: i,
@@ -74,6 +81,8 @@ for (i = 1;i <= 12;i += 1) {
 	});
 }
 $('#hours').selectspinner('update',hours);
+
+
 for (i = 0;i <= 59;i += 1) {
 	minutes.push({
 		value: i,
