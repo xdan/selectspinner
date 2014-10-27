@@ -42,7 +42,7 @@
 							title = (isScalar(me.list[i]) || !me.list[i].title) ? value : me.list[i].title+'';
 							if (title.toLowerCase().substr(0, str.length) === str) {
 								me.dropdown.find('div.xdsoft_item').removeClass('active');
-								$(this).addClass('active');
+								me.dropdown.find('div.xdsoft_item').eq(i).addClass('active');
 								me.val(value);
 								me.dropdown.trigger('recalscroll.xdsoft');
 								return false;
