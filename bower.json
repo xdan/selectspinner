@@ -1,0 +1,40 @@
+{
+	"name":"selectspinner",
+	"version":"1.0.0",
+	"main": [
+		"jquery.selectspinner.js",
+		"jquery.selectspinner.css"
+	],
+	"ignore": [
+		"**/screen",
+		"**/selectspinner.jquery.json",
+		"**/*.png",
+		"**/*.txt",
+		"**/*.md",
+		"**/*.html",
+		"**/*.tpl"
+	  ],
+	"keywords": [
+		"select",
+		"choose",
+		"spinner",
+		"selectspinner",
+		"picker",
+		"input",
+		"jquery"
+	],
+	"dependencies": {
+    "jquery": ">= 1.7.2"
+  },
+	"authors": [
+		{
+			"name": 	"Chupurnov Valeriy",
+			"email": 	"chupurnov@gmail.com",
+			"homepage": "http://xdsoft.net/contacts.html"
+    }
+	],
+	"homepage":"http://xdsoft.net/jqplugins/selectspinner/",
+	"repository": {
+		"type": "git", "url": "git://github.com:xdan/selectspinner.git"
+	}
+}

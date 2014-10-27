@@ -1,0 +1,120 @@
+.xdsoft_noselect{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.xdsoft_noselect::selection { background: transparent; }
+.xdsoft_noselect::-moz-selection { background: transparent; }
+
+.xdsoft_selectspinner select,.xdsoft_selectspinner input{
+	visibility:hidden !important;
+}
+.xdsoft_selectspinner,
+.xdsoft_selectspinner *{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+
+.xdsoft_selectspinner{
+	display:inline-block;
+	border:1px solid #ccc;
+	position:relative;
+	min-width:50px;
+}
+.xdsoft_selectspinner.active{
+outline:1px solid rgba(0,0,127,0.5);
+}
+.xdsoft_selectspinner .xdsoft_selector,.xdsoft_selectspinner .xdsoft_spinner{
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.xdsoft_selectspinner .xdsoft_selector:hover span{
+	text-decoration:underline;
+}
+.xdsoft_selectspinner .xdsoft_selector{
+	left:0px;
+	right:12px;
+}
+.xdsoft_selectspinner .xdsoft_spinner{
+	right:0px;
+	margin-left:-10px;
+	width:10px;
+	background-color:rgba(227,227,227,0.1);
+}
+.xdsoft_selectspinner .xdsoft_spinner button{
+	display:block;
+	position:absolute;
+	top:1px;
+	left:0px;
+	right:0px;
+	bottom:55%;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #adadad transparent;
+	opacity:0.7;
+	cursor:default;
+	background-color:transparent;
+	outline:0px !important;
+}
+.xdsoft_selectspinner .xdsoft_spinner button:hover{
+	opacity:1.0;
+	background-color:rgba(227,227,227,0.5);
+}
+.xdsoft_selectspinner .xdsoft_spinner button:active{
+	background-color:rgba(227,227,227,0.9);
+}
+.xdsoft_selectspinner .xdsoft_spinner button:last-child{
+	top:55%;
+	bottom:1px;
+	border-width: 5px 5px 0px 5px;
+	border-color: #adadad transparent transparent transparent;
+}
+.xdsoft_selectspinner .xdsoft_chooser{
+	position:absolute;
+	top:100%;
+	left:0px;
+	background-color:#fff;
+	width:100%;
+	border:1px solid #ccc;
+	overflow:hidden;
+	display:none;
+}
+.xdsoft_selectspinner .xdsoft_chooser>div>div.xdsoft_item{
+	padding-left:5px;
+	cursor:pointer;
+}
+.xdsoft_selectspinner .xdsoft_chooser>div>div.xdsoft_item.active{
+	background: #0097CF;
+	color: #FFFFFF;
+}
+.xdsoft_selectspinner .xdsoft_chooser>div.xdsoft_item{
+}
+
+.xdsoft_scrollbar >.xdsoft_scroller{
+	background:#ccc !important;
+	height:20px;
+	border-radius:3px;
+}
+.xdsoft_scrollbar{
+	position:absolute;
+	width:7px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	cursor:pointer;
+}
+.xdsoft_scroller_box{
+position:relative;
+}
+

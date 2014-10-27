@@ -1,0 +1,38 @@
+{
+    "name": "selectspinner",
+    "version": "1.0.0",
+	"title": "",
+    "description": "",
+    "keywords": [
+		"select",
+		"choose",
+		"spinner",
+		"selectspinner",
+		"picker",
+		"input",
+		"jquery"
+    ],
+   "author": {
+		"name": 	"Chupurnov Valeriy",
+		"email": 	"chupurnov@gmail.com",
+		"url": 		"http://xdsoft.net/contacts.html"
+	},
+	"maintainers": [{
+		"name": 	"Chupurnov Valeriy",
+		"email": 	"chupurnov@gmail.com",
+		"url": 		"http://xdsoft.net"
+	}],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/xdan/selectspinner/blob/master/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/xdan/selectspinner/issues",
+    "homepage": "http://xdsoft.net/jqplugins/selectspinner/",
+    "docs": "http://xdsoft.net/jqplugins/selectspinner/",
+    "download": "https://github.com/xdan/selectspinner/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}
