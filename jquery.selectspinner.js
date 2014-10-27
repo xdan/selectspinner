@@ -319,6 +319,7 @@
 					if (me.options.wheel) {
 						me.selectspinner.on('mousewheel', function (event) {
 							me.next(event.deltaY);
+							return false;
 						});
 					}
 					$(me.input)
