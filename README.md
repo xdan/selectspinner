@@ -1,4 +1,4 @@
-selectspinner
+selectSpinner
 =============
 
 Element select combine with spinner like jquery UI
