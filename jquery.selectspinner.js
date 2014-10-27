@@ -13,6 +13,7 @@
 		ENTER = 13,
 		TAB = 9,
 		default_options  = {
+			classes: ['xdsoft_pretty'],
 			dropDownMaxHeight: 200,
 			dropdown: true,
 			wheel: true,
@@ -179,7 +180,7 @@
 					me.dropdown = $('<div class="xdsoft_chooser"><div class="xdsoft_list"></div></div>');
 					me.spinner = $('<div class="xdsoft_spinner xdsoft_noselect"><button type="button"></button><button type="button" tabindex="-1"></button></div>');
 					me.spins = me.spinner.find('button');
-
+					me.selectspinner.addClass(me.options.classes.join(' '));
 					me.updateList();
 					me.update();
 					me.dropdown

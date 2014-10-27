@@ -29,7 +29,8 @@
 	min-width:20px;
 }
 .xdsoft_selectspinner.active{
-outline:1px solid rgba(0,0,127,0.5);
+  border: 1px solid #5897fb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .xdsoft_selectspinner .xdsoft_selector,.xdsoft_selectspinner .xdsoft_spinner{
 	display:inline-block;
@@ -117,5 +118,17 @@ outline:1px solid rgba(0,0,127,0.5);
 }
 .xdsoft_scroller_box{
 position:relative;
+}
+
+.xdsoft_pretty{
+	border-radius:3px;
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
+	background: -webkit-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background: -o-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background: linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background-clip: padding-box;
+	box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+	color: #444;
 }
 
