@@ -1,0 +1,26 @@
+{
+  "name": "selectspinner",
+  "version": "1.0.0",
+  "description": "Select combain with Spinner it's very usefull",
+  "main": "jquery.selectspinner.js",
+  "keywords": [
+		"jquery-plugin",
+		"select",
+		"choose",
+		"spinner",
+		"selectspinner",
+		"picker",
+		"input",
+		"jquery"
+    ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xdan/selectspinner.git"
+  },
+  "author": "Chupurnov <chupurnov@gmail.com> (http://xdsoft.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xdan/selectspinner/issues"
+  },
+  "homepage": "https://xdsoft.net/jqplugins/selectspinner"
+}
