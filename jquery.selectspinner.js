@@ -223,6 +223,7 @@
 						.on('mousedown', function (event) {
 							me.open();
 							event.preventDefault();
+							event.stopPropagation();
 						});
 
 					var btn,
